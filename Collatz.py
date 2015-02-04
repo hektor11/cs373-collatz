@@ -6,6 +6,12 @@
 # Glenn P. Downing
 # ---------------------------
 
+#-------------
+#imports
+#-------------
+import sys
+
+
 # ------------
 # collatz_read
 # ------------
@@ -27,11 +33,12 @@ def cycle_length(n):
     assert n > 0
     c = 1
     while (n > 1):
-        if(n % 2) == 0:
-            n = (n // 2)
+        if(n & 1) == 0:
+            n = (n >> 1)
+            c += 1
         else:
-            n = (3 * n) + 1
-        c += 1
+            n = n + (n >> 1) + 1
+            c += 2
     assert c > 0
     return c
 
@@ -47,6 +54,17 @@ def collatz_eval (i, j) :
     """
     assert i > 0 and i < 1000000
     assert j > 0 and j < 1000000
+
+    #Check if ranges are reversed
+    if(i > j):
+        temp = i
+        i = j
+        j = temp
+
+    #Optimize by reducing range
+    m = (j >> 1) + 1
+    if(i < m):
+        i = m
 
     max = 1
     curr = 1
