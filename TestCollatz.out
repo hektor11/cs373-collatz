@@ -1,8 +1,63 @@
-.......
+FFFF..F
+======================================================================
+FAIL: test_eval_1 (__main__.TestCollatz)
 ----------------------------------------------------------------------
-Ran 7 tests in 0.001s
+Traceback (most recent call last):
+  File "TestCollatz.py", line 39, in test_eval_1
+    self.assertEqual(v, 20)
+AssertionError: 1 != 20
 
-OK
+======================================================================
+FAIL: test_eval_2 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 43, in test_eval_2
+    self.assertEqual(v, 125)
+AssertionError: 1 != 125
+
+======================================================================
+FAIL: test_eval_3 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 47, in test_eval_3
+    self.assertEqual(v, 89)
+AssertionError: 1 != 89
+
+======================================================================
+FAIL: test_eval_4 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 51, in test_eval_4
+    self.assertEqual(v, 174)
+AssertionError: 1 != 174
+
+======================================================================
+FAIL: test_solve (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 70, in test_solve
+    self.assertEqual(w.getvalue(), "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
+AssertionError: '1 10 1\n100 200 1\n201 210 1\n900 1000 1\n' != '1 10 20\n100 200 125\n201 210 89\n900 1000 174\n'
+- 1 10 1
+?      ^
++ 1 10 20
+?      ^^
+- 100 200 1
++ 100 200 125
+?          ++
+- 201 210 1
+?         ^
++ 201 210 89
+?         ^^
+- 900 1000 1
++ 900 1000 174
+?           ++
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+FAILED (failures=5)
 Name          Stmts   Miss Branch BrMiss  Cover   Missing
 ---------------------------------------------------------
 Collatz          12      0      2      0   100%   
