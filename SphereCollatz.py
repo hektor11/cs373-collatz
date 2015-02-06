@@ -132,4 +132,10 @@ def collatz_solve (r, w) :
 global cache
 cache = [0] * 1000001
 
+#precompute values
+for x in range(1,10001):
+    cache[x] = cycle_length(x)
+
 collatz_solve(sys.stdin, sys.stdout)
+
+

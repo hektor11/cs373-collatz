@@ -41,6 +41,7 @@ def collatz_read (s) :
 def cycle_length(n):
     assert n > 0
     global cache
+    
     c = 1
     idx = n
     while (n > 1):
@@ -51,11 +52,9 @@ def cycle_length(n):
         else:
             if(n & 1) == 0:
                 n = over_flow(n >> 1)
-                #n = (n >> 1)
                 c += 1
             else:
                 n = over_flow(n + (n >> 1) + 1)
-                #n = n + (n >> 1) + 1
                 c += 2
 
     assert c > 0
@@ -68,7 +67,7 @@ def cycle_length(n):
 # ------------
 
 def collatz_eval (i, j) :
-    """# pragma: no cover
+    """
     i the beginning of the range, inclusive
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
@@ -76,13 +75,13 @@ def collatz_eval (i, j) :
     assert i > 0 and i < 1000000
     assert j > 0 and j < 1000000
 
-    #Check if ranges are reversed
+    #Check if range is not from least to greatest
     if(i > j):
         temp = i
         i = j
         j = temp
 
-    #Optimize by reducing range
+    #Optimize by reducing the range 
     m = (j >> 1) + 1
     if(i < m):
         i = m
@@ -132,3 +131,7 @@ def collatz_solve (r, w) :
 
 global cache
 cache = [0] * 1000001
+
+#precompute values
+for x in range(1,10001):
+    cache[x] = cycle_length(x)
