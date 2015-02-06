@@ -1,3 +1,15 @@
+commit c73b7989b6ff6899fd269ffd7eb5faa2b932e56d
+Author: Hector Garcia <hektor11@cs.utexas.edu>
+Date:   Thu Feb 5 19:20:53 2015 -0600
+
+    Precomputes cache
+
+commit d52d1bf80dfad43eb0475345f2d3faf73344ce07
+Author: Hector Garcia <hektor11@cs.utexas.edu>
+Date:   Thu Feb 5 18:36:26 2015 -0600
+
+    Created Collatz.log
+
 commit 33768063a4b3f8835c9e3e172c7711abba5d33c7
 Author: Hector Garcia <hektor11@cs.utexas.edu>
 Date:   Thu Feb 5 18:32:14 2015 -0600
