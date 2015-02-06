@@ -11,6 +11,15 @@
 #-------------
 import sys
 
+#-------------
+#over_flow
+#-------------
+
+def over_flow(n):
+    if(n > 2147483647):
+        n = n % 2147483647
+    return n
+
 
 # ------------
 # collatz_read
@@ -31,15 +40,27 @@ def collatz_read (s) :
 
 def cycle_length(n):
     assert n > 0
+    global cache
     c = 1
+    idx = n
     while (n > 1):
-        if(n & 1) == 0:
-            n = (n >> 1)
-            c += 1
+        # n is in cache
+        if (n < 1000001) and (cache[n] != 0):
+            c += cache[n] - 1
+            n = 1
         else:
-            n = n + (n >> 1) + 1
-            c += 2
+            if(n & 1) == 0:
+                n = over_flow(n >> 1)
+                #n = (n >> 1)
+                c += 1
+            else:
+                n = over_flow(n + (n >> 1) + 1)
+                #n = n + (n >> 1) + 1
+                c += 2
+
     assert c > 0
+    if(idx < 1000001):
+        cache[idx] = c
     return c
 
 # ------------
@@ -47,7 +68,7 @@ def cycle_length(n):
 # ------------
 
 def collatz_eval (i, j) :
-    """
+    """# pragma: no cover
     i the beginning of the range, inclusive
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
@@ -104,3 +125,10 @@ def collatz_solve (r, w) :
         i, j = collatz_read(s)
         v    = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+
+# ----
+# main
+# ----
+
+global cache
+cache = [0] * 1000001
