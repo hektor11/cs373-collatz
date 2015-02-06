@@ -1,0 +1,35 @@
+commit 33768063a4b3f8835c9e3e172c7711abba5d33c7
+Author: Hector Garcia <hektor11@cs.utexas.edu>
+Date:   Thu Feb 5 18:32:14 2015 -0600
+
+    Fixes #9 #11 #12 #15 #16 #18 #19
+
+commit cb32b9e525d4b95fb4f4bc9bab95210097397f36
+Author: Hector Garcia <hektor11@cs.utexas.edu>
+Date:   Wed Feb 4 15:39:54 2015 -0600
+
+    SphereCollatz.py created and optimized without a cache.
+
+commit f120c927681963c46d9373ab11c722522f3d244e
+Author: Hector Garcia <hektor11@cs.utexas.edu>
+Date:   Wed Feb 4 15:01:32 2015 -0600
+
+    Implemented simplest solution which passes unit tests.
+
+commit e9142628bfcc0c0d56be63026120dcfe2c0dcb03
+Author: Hector Garcia <hektor11@cs.utexas.edu>
+Date:   Wed Feb 4 14:37:26 2015 -0600
+
+    Fixed given unit tests and confirmed expected failures.
+
+commit 9bd1e29d81516d79e1a6613f8bbbe2aff4cf9932
+Author: Hector Garcia <hektor11@cs.utexas.edu>
+Date:   Wed Feb 4 14:25:19 2015 -0600
+
+    RunCollatz.py and TestCollatz.py ran confirming expected results.
+
+commit 579fc29eda683ae910ece86966708438f2135d6d
+Author: Hector Garcia <hektor11@cs.utexas.edu>
+Date:   Mon Feb 2 18:43:24 2015 -0600
+
+    First commit
