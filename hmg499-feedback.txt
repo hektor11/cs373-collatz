@@ -1,0 +1,22 @@
+hmg499
+5/5 github setup and commit log
+5/5 github issues
+15/15 sphere and cache
+15/15 average of 3 unit test per function
+13/15 100 lines of acceptance test
+10/10 Pydoc
+5/5 Google Form with time estimate.
+0/0 bonus and panalty points
+68/70 total
+comment:
+Please don't commit junk.
+Invalid acceptance test -2
+Bonus:
+    -
+Penalty:
+    pht93 Passed
+    stv223 Passed
+    kth289 Passed
+    crt685 Passed
+    gg8745 Passed
+    
